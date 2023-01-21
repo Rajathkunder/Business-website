@@ -1,0 +1,109 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #090909;
+    padding: 50px;
+    color: lightblue;
+}
+/* General styles end */
+.container {
+    max-width: 1660px;
+    margin: 0 auto;
+    padding: 15px;
+    margin-top:-51px;
+}
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1f2327;
+    padding-block: 15px;
+}
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+.logo {
+    margin-right: 50px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+#toggler,
+.navbar label {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .list {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    #toggler:checked ~ .menu {
+        max-height: 100%;
+    }
+}
+h2{
+text-align: center;
+font-size: 30px;
+  color: #333;
+}
+h2:hover {
+  color: #006699;
+  cursor: pointer;
+}
+
+.image-container {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  height: auto;
+  width: auto;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+h3{
+  text-align: center;
+}
+.same-size {
+  max-width: 300px;
+  max-height: 200px;
+}
+.footer {
+    
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    color:#333;
+}
+@media (max-width: 600px) {
+  .footer {
+    font-size: smaller;
+  }
+}

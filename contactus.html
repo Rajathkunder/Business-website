@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;
+background-color: black;}
+label {
+  color:lightblue;
+}
+
+
+input[type=text],input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  color: lightblue;
+}
+
+input[type=submit] {
+  background-color: blue;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: lightblue;
+}
+
+input[type=submit]:hover {
+  background-color: purple;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: black;
+  padding: 20px;
+}
+.back-button {
+    position: absolute;
+    top: 2;
+    left: 4;
+    padding: 8px;
+    font-size: 15px;
+    background-color: red;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .back-button {
+        font-size: 16px;
+    }
+}
+
+</style>
+</head>
+<body>
+<button class="back-button" onclick="window.history.back()">Back</button>
+
+<center><b><h3 style="color: lightblue;">Connect with us........</h3></b></center>
+
+<div class="container">
+  <form class="contact-form">
+    <label for="fname"> Name</label>
+    <input type="text" id="fname" name="name" placeholder="Your name.." required="">
+<label for="fname"> Email</label>
+    <input type="email" id="email" name="email" placeholder="Your Email.." required="">
+
+   
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="usa">India</option>
+      <option value="australia">Australia</option>
+      <option value="canada">Canada</option>
+      <option value="usa">USA</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script type="text/javascript">
+  const form = document.querySelector(".contact-form");
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Get the input field values
+    const name = form.elements.name.value;
+     const email = form.elements.email.value;
+    const country = form.elements.country.value;
+    const message = form.elements.subject.value;
+    // Do some validation and handling of the form data
+    // ...
+    // Display a message to the user
+    alert(`Thank you ${name} for reaching out to us! We will get back to you soon.`);
+    form.reset()
+});
+</script>
+</body>
+</html>
